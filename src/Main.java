@@ -20,9 +20,7 @@ public class Main {
         var geradora = new GeradoraDeFigurinhas();
 
 
-        for (int i = 0; i < 3; i++) {
-
-           Conteudo conteudo = conteudos.get(i);
+        for (Conteudo conteudo : conteudos) {
 
             InputStream inputStream = new URL(conteudo.getUrlimagem()).openStream();
             String nomeArquivo = "saida/" + conteudo.getTitulo() + ".png";
